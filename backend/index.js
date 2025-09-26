@@ -16,10 +16,7 @@ import contactRoutes from "./routes/contact.js"
 
 import path from 'path';
 
-app.use(cors({
-  origin: ['https://travel-package-booking-platform.onrender.com'],
-  credentials: true
-}));
+
 
 
 const __dirname=path.resolve();
@@ -27,10 +24,14 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 
 //static files
 
+app.use(cors({
+  origin: ['https://travel-package-booking-platform.onrender.com'],
+  credentials: true
+}));
 
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/products", productRoutes);
