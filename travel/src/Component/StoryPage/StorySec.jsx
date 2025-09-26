@@ -33,7 +33,7 @@ const StorySec = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9009/api/v1/products/${id}`)
+      .get(`https://travel-package-booking-platform.onrender.com/api/v1/products/${id}`)
       .then((response) => {
         setDestination(response.data);
         setLoading(false);

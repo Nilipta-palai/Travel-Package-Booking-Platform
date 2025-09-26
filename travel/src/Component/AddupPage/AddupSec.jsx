@@ -125,7 +125,7 @@ const AddupSec = () => {
         extraInfo,
       };
       const response = await axios.post(
-        "http://localhost:9009/api/v1/products/product",
+        "https://travel-package-booking-platform.onrender.com/api/v1/products/product",
         requestData,
         { headers: { "Content-Type": "application/json" } }
       );

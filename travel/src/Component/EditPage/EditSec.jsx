@@ -18,7 +18,7 @@ const EditSec = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9009/api/v1/products/${id}`)
+      .get(`https://travel-package-booking-platform.onrender.com/api/v1/products/${id}`)
     .then((response) => {
   const { location, category, photo, description, price, ratings, extraInfo } = response.data;
   setLocation(location);
@@ -90,7 +90,7 @@ const validateForm = () => {
   extraInfo,
 };
 
-      await axios.put(`http://localhost:9009/api/v1/products/${id}`, updatedStory);
+      await axios.put(`https://travel-package-booking-platform.onrender.com/api/v1/products/${id}`, updatedStory);
       alert("Story updated successfully!");
       navigate("/destiny");
     } catch (error) {

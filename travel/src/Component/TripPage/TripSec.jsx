@@ -14,7 +14,7 @@ const TripSec = () => {
       try {
         const token = localStorage.getItem("token");
         const { data } = await axios.get(
-          "http://localhost:9009/api/v1/trips/my-trips",
+          "https://travel-package-booking-platform.onrender.com/api/v1/trips/my-trips",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -43,7 +43,7 @@ const TripSec = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:9009/api/v1/trips/deleteTrip/${trip._id}`, {
+      await axios.delete(`https://travel-package-booking-platform.onrender.com/api/v1/trips/deleteTrip/${trip._id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -65,7 +65,7 @@ const TripSec = () => {
       };
 
       await axios.put(
-        `http://localhost:9009/api/v1/trips/updateTrip/${editingTrip._id}`,
+        `https://travel-package-booking-platform.onrender.com/api/v1/trips/updateTrip/${editingTrip._id}`,
         payload,
         {
           headers: { Authorization: `Bearer ${token}` },

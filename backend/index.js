@@ -16,6 +16,12 @@ import contactRoutes from "./routes/contact.js"
 
 import path from 'path';
 
+app.use(cors({
+  origin: ['https://travel-package-booking-platform.onrender.com'],
+  credentials: true
+}));
+
+
 const __dirname=path.resolve();
 const app = express();
 
@@ -76,7 +82,7 @@ mongoose.connect(process.env.MONGODB_URL)
     await createAdminIfNotExists(); //  Call after DB connection
 
     app.listen(9009, () => {
-      console.log(" Server running at http://localhost:9009");
+      console.log(" Server running at https://travel-package-booking-platform.onrender.com");
     });
   })
   .catch((err) => {

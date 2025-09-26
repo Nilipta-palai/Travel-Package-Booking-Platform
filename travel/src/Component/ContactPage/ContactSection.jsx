@@ -44,7 +44,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    const response = await fetch("http://localhost:9009/api/v1/contact", {
+    const response = await fetch("https://travel-package-booking-platform.onrender.com/api/v1/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData), // ✅ use actual form data

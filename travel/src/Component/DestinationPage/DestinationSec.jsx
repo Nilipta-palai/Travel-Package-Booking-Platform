@@ -21,7 +21,7 @@ useEffect(() => {
   const fetchDestinations = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:9009/api/v1/products/allproduct"
+        "https://travel-package-booking-platform.onrender.com/api/v1/products/allproduct"
       );
 
       // 👇 Add this line

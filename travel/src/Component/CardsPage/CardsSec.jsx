@@ -28,7 +28,7 @@ const CardsSec = () => {
     }
 
     axios
-      .get("http://localhost:9009/api/v1/products/allproduct")
+      .get("https://travel-package-booking-platform.onrender.com/api/v1/products/allproduct")
       .then((response) => {
         const formattedData = response.data.map((item) => ({
           id: item._id,
@@ -81,7 +81,7 @@ const CardsSec = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:9001/api/v1/products/${id}`)
+      .delete(`https://travel-package-booking-platform.onrender.com/api/v1/products/${id}`)
       .then(() => setCardData((prevData) => prevData.filter((item) => item.id !== id)))
       .catch((error) => console.error("Error deleting card:", error));
   };

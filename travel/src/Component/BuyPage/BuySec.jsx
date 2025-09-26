@@ -76,7 +76,7 @@ const BuySec = () => {
 
     try {
       const { data: orderData } = await axios.post(
-        "http://localhost:9009/api/v1/payment/order",
+        "https://travel-package-booking-platform.onrender.com/api/v1/payment/order",
         { amount: parseInt(amount) }
       );
 
@@ -94,7 +94,7 @@ const BuySec = () => {
             const token = localStorage.getItem("token");
 
             await axios.post(
-              "http://localhost:9009/api/v1/trips/save",
+              "https://travel-package-booking-platform.onrender.com/api/v1/trips/save",
               {
                 product,
                 persons,

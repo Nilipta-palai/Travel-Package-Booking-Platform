@@ -22,7 +22,7 @@ console.log(hasFetched.current)
     const fetchDestination = async () => {
         console.log(count)
       try {
-        const res = await axios.get(`http://localhost:9009/api/v1/products/${id}`);
+        const res = await axios.get(`https://travel-package-booking-platform.onrender.com/api/v1/products/${id}`);
         setDestination(res.data);
       } catch (err) {
         console.error("Fetch error:", err);

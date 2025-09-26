@@ -62,7 +62,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:9009/api/v1/users/",
+        "https://travel-package-booking-platform.onrender.com/api/v1/users/",
         formData
       );
 

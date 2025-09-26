@@ -15,7 +15,7 @@ const AdminSec = () => {
   // Fetch stories
   const fetchStories = () => {
     axios
-      .get("http://localhost:9009/api/v1/products/allproduct")
+      .get("https://travel-package-booking-platform.onrender.com/api/v1/products/allproduct")
       .then((response) => {
         setCardData(response.data);
         setLoading(false);
@@ -34,7 +34,7 @@ const AdminSec = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:9009/api/v1/products/${id}`)
+      .delete(`https://travel-package-booking-platform.onrender.com/api/v1/products/${id}`)
       .then(() => {
         setCardData((prevData) => prevData.filter((item) => item._id !== id));
         toast.success("Product deleted successfully!");
